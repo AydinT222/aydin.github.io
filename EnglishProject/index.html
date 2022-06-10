@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Romeo & Juliet Project</title>
+	<!-- Font Awesome -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
+	<script src="index.js" defer></script>
+	<style>
+		html,
+		body,
+		#root {
+			height: 100%;
+		}
+
+		#root {
+			min-height: 100%;
+		}
+
+		.footer {
+			margin-top: -12px;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="root">
+		<nav class="navbar">
+			<div class="container">
+				<div class="navbar-brand">
+					<a class="navbar-item">
+						Romeo & Juliet Project
+					</a>
+				</div>
+				<label for="menu-toggle" class="navbar-toggle">
+					<span></span>
+					<span></span>
+					<span></span>
+				</label>
+				<input type="checkbox" id="menu-toggle" class="is-hidden" />
+				<div class="navbar-end navbar-menu">
+					<a class="navbar-item is-tab" id="infobtn">
+						<span class="icon"><i class="fa-solid fa-circle-info"></i></span><span>Info</span>
+					</a>
+					<a class="navbar-item is-tab" id="loginbtn">
+						<span class="icon"><i class="fa fa-sign-in"></i></span><span>Login</span>
+					</a>
+				</div>
+			</div>
+		</nav>
+
+		<section class="main-content columns is-fullheight">
+			<aside class="column is-2 is-narrow-mobile is-fullheight section is-hidden-mobile">
+				<p class="menu-label">Navigation</p>
+				<ul class="menu-list">
+					<li>
+						<a href="#" class="is-active" id="homebtn">
+							<span class="icon"><i class="fa fa-home"></i></span> Home
+						</a>
+					</li>
+
+					<li>
+						<a href="#" class="" id="timelinebtn">
+							<span class="icon"><i class="fa-solid fa-timeline"></i></span> Timeline
+						</a>
+					</li>
+				</ul>
+				<p class="menu-label">People</p>
+				<ul class="menu-list" id="users"></ul>
+			</aside>
+
+			<div class="container column is-10">
+				<div class="section" id="section">
+					<h1>These posts are going from oldest to newest</h1>
+				</div>
+			</div>
+
+		</section>
+
+		<footer class="footer">
+			<div class="container">
+				<div class="content has-text-centered">
+					<p>For the Romeo & Juliet Project in English Class</p>
+				</div>
+			</div>
+		</footer>
+
+	</div>
+
+	<div class="modal" id="infoModal">
+		<div class="modal-background"></div>
+		<div class="modal-card">
+			<header class="modal-card-head">
+				<p class="modal-card-title">Information</p>
+				<button class="delete" aria-label="close" data-bulma-modal="close"></button>
+			</header>
+			<section class="modal-card-body">
+				<p>Welcome to the "fake social media" site for the Romeo & Juliet project!</p>
+				<p>Here you can easily scroll through the timeline and posts to see what events happened in the book.
+				</p>
+			</section>
+		</div>
+	</div>
+
+	<div class="modal" id="timelineModal">
+		<div class="modal-background"></div>
+		<div class="modal-card">
+			<header class="modal-card-head">
+				<p class="modal-card-title">Timeline</p>
+				<button class="delete" aria-label="close" data-bulma-modal="close"></button>
+			</header>
+			<section class="modal-card-body">
+				<div id="timeline">
+				</div>
+			</section>
+		</div>
+	</div>
+
+	<div class="modal" id="loginModal">
+		<div class="modal-background"></div>
+		<div class="modal-card">
+			<header class="modal-card-head">
+				<p class="modal-card-title">Notice</p>
+				<button class="delete" aria-label="close" data-bulma-modal="close"></button>
+			</header>
+			<section class="modal-card-body">
+				<p>You currently cannot login, as this is just a sample site.</p>
+			</section>
+		</div>
+	</div>
+
+</body>
+
+</html>
